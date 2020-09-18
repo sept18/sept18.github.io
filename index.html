@@ -5,48 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sept 18 Exercise</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="console.log('Bai co Van')" oncopy='console.log("dung cop bai nay nhe :D")' oncut='location = "http://venus.rf.gd/"'>
+<body onload="lg.innerHTML = 'Pocket calculator'" oncopy='talk.textContent = "Small text, type it by urself"' oncut='location = "http://venus.rf.gd/"'>
+    <p id="talk"></p>
     <form action="">
-        <table align="center">
-            <tr>
-                <td onmousemove="this.style.background = 'yellow'">Khách hàng:</td>
-                <td><input type="text" id="khach" onblur="this.style.background = 'lightblue'" onkeyup="tinh()"></td>
-            </tr>
-            <tr>
-                <td onmouseenter='this.style.background = "lightblue"'>Số lượng:</td>
-                <td>
-                    <input type="number" required min="1" id="soLuong" onchange="tinh()" onkeydown="this.style.color = 'red'" onkeypress="console.log(this.value)">
-                </td>
-            </tr>
-            <tr>
-                <td onmouseleave='this.style.background = "pink"'>Đơn giá:</td>
-                <td id="donGia">
-                    <!-- <input type="number" disabled id="donGia" value="5000"> đ -->
-                </td>
-            </tr>
-            <tr>
-                <td>Giảm giá:</td>
-                <td><input type="number" disabled id="giamGia"> %</td>
-            </tr>
-            <tr>
-                <td>Tổng tiền thanh toán:</td>
-                <td>
-                    <span id="tien"></span>
-                    <span id="tenKhach"></span>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="button" onclick="tinh()" value="Tính tiền"></td>
-            </tr>
-        </table>
+        <fieldset>
+            <legend id="lg"></legend>
+            <table align="center">
+                <tr>
+                    <td onmousemove="this.style.background = 'yellow'">Khách hàng:</td>
+                    <td><input type="text" id="khach" onblur="this.style.background = 'lightblue'" onkeyup="tinh()"></td>
+                </tr>
+                <tr>
+                    <td onmouseenter='this.style.background = "lightblue"'>Số lượng:</td>
+                    <td>
+                        <input type="number" required min="1" id="soLuong" onchange="tinh()" onkeydown="this.style.color = 'red'" onkeypress="console.log(this.value)">
+                    </td>
+                </tr>
+                <tr>
+                    <td onmouseleave='this.style.background = "pink"'>Đơn giá:</td>
+                    <td id="donGia">
+                        <!-- <input type="number" disabled id="donGia" value="5000"> đ -->
+                    </td>
+                </tr>
+                <tr>
+                    <td onmouseover="this.style.background = 'lightgreen'">Giảm giá:</td>
+                    <td><input type="number" disabled id="giamGia"> %</td>
+                </tr>
+                <tr>
+                    <td ondblclick="this.innerHTML = 'Total payment amount:'" onmouseout="this.style.background = 'lightgrey'">Tổng tiền thanh toán:</td>
+                    <td>
+                        <span id="tien"></span>
+                        <span id="tenKhach"></span>
+                    </td>
+                </tr>
+                <tfoot>
+                    <td></td>
+                    <td><input type="button" onclick="tinh()" value="Tính tiền"></td>
+                </tfoot>
+            </table>
+        </fieldset>
     </form>
-    <p ondblclick="this.innerHTML = 'hihi'">OnDbClick</p>
-    <input type="text" onchange="kq.innerHTML = this.value">
-    <p id="kq"></p>
-    <section onmouseover="this.style.background = 'lightgreen'" onmouseout="this.style.background = 'lightgrey'">OnMouseOver</section>
+    <!-- <input type="text" onchange="kq.innerHTML = this.value">
+    <p id="kq"></p> -->
     <script src="script.js"></script>
 </body>
 

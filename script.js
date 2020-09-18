@@ -1,5 +1,5 @@
 donGia.textContent = new Intl.NumberFormat('vn-VN', { style: 'currency', currency: 'VND' }).format(500000)
-
+    // fSet = document.getElementsByTagName('fieldset')[0]
 function tinh() {
     soLuong = document.getElementById('soLuong').value
         // donGia = document.getElementById('donGia').value
