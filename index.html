@@ -7,16 +7,16 @@
     <title>Sept 18 Exercise</title>
 </head>
 
-<body onload="console.log('Bai co Van')">
+<body onload="console.log('Bai co Van')" oncopy='console.log("dung cop bai nay nhe :D")' oncut='this.style.background = "purple"'>
     <form action="">
         <table align="center">
             <tr>
                 <td onmousemove="this.style.background = 'yellow'">Khách hàng:</td>
-                <td><input type="text" id="khach" onblur="this.style.background = 'lightblue'"></td>
+                <td><input type="text" id="khach" onblur="this.style.background = 'lightblue'" onkeyup="console.log(this.value)"></td>
             </tr>
             <tr>
                 <td onmouseenter='this.style.background = "lightblue"'>Số lượng:</td>
-                <td><input type="number" required min="1" id="soLuong" onchange="tinh()"></td>
+                <td><input type="number" required min="1" id="soLuong" onchange="tinh()" onkeydown="tinh()" onkeypress="console.log(this.value)"></td>
             </tr>
             <tr>
                 <td onmouseleave='this.style.background = "pink"'>Đơn giá:</td>
