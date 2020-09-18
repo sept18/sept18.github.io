@@ -12,5 +12,7 @@ function tinh() {
     document.getElementById('giamGia').value = giamGia
     tien = soLuong * 500000 * (100 - giamGia) / 100
     ts = new Intl.NumberFormat('vn-VN', { style: 'currency', currency: 'VND' }).format(tien)
-    document.getElementById('tien').innerHTML = `${ts} của khách ${khach.value}`
+    khach.style.textTransform = tenKhach.style.textTransform = 'capitalize'
+    tenKhach.innerHTML = khach.value
+    document.getElementById('tien').innerHTML = `${ts} của khách `
 }
