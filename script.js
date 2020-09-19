@@ -1,8 +1,17 @@
 donGia.textContent = new Intl.NumberFormat('vn-VN', { style: 'currency', currency: 'VND' }).format(500000)
-    // fSet = document.getElementsByTagName('fieldset')[0]
+sl = document.getElementById('soLuong')
+soLuong = sl.value;
+btn = document.getElementById('btn')
+
+function toggleBtn(soLuong) {
+    if (soLuong != 0) btn.style.display = 'block'
+    else btn.style.display = 'none'
+}
+toggleBtn(soLuong)
+
 function tinh() {
-    soLuong = document.getElementById('soLuong').value
-        // donGia = document.getElementById('donGia').value
+    let soLuong = sl.value;
+    // donGia = document.getElementById('donGia').value
     giamGia = document.getElementById('giamGia').value
     if (soLuong > 25) giamGia = 20
     else if (soLuong <= 25 && soLuong > 15) giamGia = 10
@@ -15,6 +24,7 @@ function tinh() {
     khach.style.textTransform = tenKhach.style.textTransform = 'capitalize'
     tenKhach.innerHTML = khach.value
     document.getElementById('tien').innerHTML = `${ts} của khách `
+    toggleBtn(soLuong)
 }
 ani = document.getElementById('ani')
 rotate = document.getElementById('rotate')
