@@ -16,3 +16,21 @@ function tinh() {
     tenKhach.innerHTML = khach.value
     document.getElementById('tien').innerHTML = `${ts} của khách `
 }
+ani = document.getElementById('ani')
+rotate = document.getElementById('rotate')
+window.onload = function() {
+    ani.style.position = 'relative'
+    ani.style.left = '0px'
+    lg.innerHTML = 'Pocket calculator'
+}
+
+function onCopy() {
+    document.getElementById('talk').textContent = 'Small text, type it by urself'
+}
+i = 0
+
+function onKeyPress() {
+    ani.style.left = parseInt(ani.style.left) + 10 + 'px'
+    rotate.style.transform = 'rotate(' + i + 'deg)'
+    i += 60
+}

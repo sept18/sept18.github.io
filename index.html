@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="lg.innerHTML = 'Pocket calculator'" oncopy='talk.textContent = "Small text, type it by urself"' oncut='location = "http://venus.rf.gd/"'>
+<body oncopy='onCopy()' oncut='location = "http://venus.rf.gd/"'>
     <p id="talk"></p>
     <form action="">
         <fieldset>
@@ -21,7 +21,7 @@
                 <tr>
                     <td onmouseenter='this.style.background = "lightblue"'>Số lượng:</td>
                     <td>
-                        <input type="number" required min="1" id="soLuong" onchange="tinh()" onkeydown="this.style.color = 'red'" onkeypress="console.log(this.value)">
+                        <input type="number" required min="1" id="soLuong" onchange="tinh()" onkeydown="this.style.color = 'red'" onkeypress="onKeyPress()">
                     </td>
                 </tr>
                 <tr>
@@ -48,6 +48,8 @@
             </table>
         </fieldset>
     </form>
+    <div id="rotate"></div>
+    <div id="ani"></div>
     <!-- <input type="text" onchange="kq.innerHTML = this.value">
     <p id="kq"></p> -->
     <script src="script.js"></script>
