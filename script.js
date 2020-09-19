@@ -32,5 +32,5 @@ i = 0
 function onKeyPress() {
     ani.style.left = parseInt(ani.style.left) + 10 + 'px'
     rotate.style.transform = 'rotate(' + i + 'deg)'
-    i += 60
+    i += 70
 }

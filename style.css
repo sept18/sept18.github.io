@@ -1,5 +1,5 @@
 form {
-    margin: 15% 0;
+    margin: 10%;
 }
 
 body {
@@ -16,4 +16,5 @@ body {
 
 #rotate {
     margin: auto;
+    height: 9vh !important;
 }
